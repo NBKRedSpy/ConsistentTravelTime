@@ -10,7 +10,7 @@
   "DLL": "ConsistentTravelTime.dll",
 
   "Settings": {
-    "PlanetTravelStrategy": "JumpDistance",
+    "UseLowerAmount": true,
   }
 
 }

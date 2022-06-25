@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="InControl">
       <HintPath>E:\Games\Steam\steamapps\common\BATTLETECH\BattleTech_Data\Managed\InControl.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ModTek">
       <HintPath>E:\Games\Steam\steamapps\common\BATTLETECH\Mods\ModTek\ModTek.dll</HintPath>
@@ -73,6 +74,7 @@
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>E:\Games\Steam\steamapps\common\BATTLETECH\BattleTech_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>E:\Games\Steam\steamapps\common\BATTLETECH\BattleTech_Data\Managed\UnityEngine.UI.dll</HintPath>
@@ -101,13 +103,13 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>xcopy /y "$(TargetPath)" "E:\Games\Steam\steamapps\common\BATTLETECH\Mods\$(ProjectName)\"
-robocopy /xc /xn /xo . "E:\Games\Steam\steamapps\common\BATTLETECH\Mods\$(ProjectName)\\" mod.json
+robocopy /xc /xn /xo . "E:\Games\Steam\steamapps\common\BATTLETECH\Mods\$(ProjectName)\\" mod.json 
 
 rd /q /s  $(ProjectName)
-robocopy . $(ProjectName) $(ProjectName).dll mod.json
+robocopy . $(ProjectName) $(ProjectName).dll mod.json 
+robocopy $(SolutionDir) $(ProjectName) README.md
 
 "C:\Program Files\7-Zip\7z.exe" a $(ProjectName).zip $(ProjectName)
-
 </PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -39,11 +39,8 @@ namespace ConsistentTravelTime.Patches
 
 
                 if (
-                    !((__instance.PreTransitionState == SimGameTravelStatus.WARMING_ENGINES && 
-                        __instance.PostTransitionState == SimGameTravelStatus.TRANSIT_FROM_JUMP) 
-                    || (__instance.PreTransitionState == SimGameTravelStatus.TRANSIT_TO_JUMP &&
-                        __instance.PostTransitionState == SimGameTravelStatus.WARMING_ENGINES)
-                   ))
+                    !(__instance.PreTransitionState == SimGameTravelStatus.WARMING_ENGINES && 
+                        __instance.PostTransitionState == SimGameTravelStatus.TRANSIT_FROM_JUMP))
                 {
                     return;
                 }
@@ -60,7 +57,14 @@ namespace ConsistentTravelTime.Patches
                 switch (Core.ModSettings.PlanetTravelStrategy)
                 {
                     case PlanetTravelStrategy.PlanetCost:
-                        travelTime = jumpDistance < planetCost ? jumpDistance : planetCost;
+                        if(Core.ModSettings.UseLowerAmount)
+                        {
+                            travelTime = jumpDistance < planetCost ? jumpDistance : planetCost;
+                        }
+                        else
+                        {
+                            travelTime = planetCost;
+                        }
                         break;
                     case PlanetTravelStrategy.JumpDistance:
                         travelTime = jumpDistance;
