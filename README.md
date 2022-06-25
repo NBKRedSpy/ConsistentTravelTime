@@ -1,4 +1,4 @@
-# ConsistentTravelTime
+# Consistent Travel Time
 Changes the travel time to a planet to be consistent in all situations.
 
 
@@ -13,7 +13,7 @@ Battletech has two different times to travel to the planet:
 
 ## Travel Time Changes
 
-By default, this mod will change the time to planet to be either the lower of the "jump distance" and the "planet cost".
+By default, this mod will change the time to planet to be the lower of the "jump distance" and the "planet cost".
 
 For example, a planet with a jump distance of 7 days will take 3 days to travel.  A planet with a jump distance of 1 day will take 1 day to travel to the planet.
 
