@@ -1,0 +1,16 @@
+﻿{
+  "Name": "ConsistentTravelTime",
+  "Version": "1.0.0.0",
+  "Description": "",
+  "Author": "NBK_RedSpy",
+  "Website": "https://github.com/NBKRedSpy/ConsistentTravelTime",
+
+  "Enabled": true,
+
+  "DLL": "ConsistentTravelTime.dll",
+
+  "Settings": {
+    "PlanetTravelStrategy": "JumpDistance",
+  }
+
+}
