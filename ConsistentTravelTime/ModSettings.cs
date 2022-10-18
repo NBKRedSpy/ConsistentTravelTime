@@ -15,11 +15,10 @@ namespace ConsistentTravelTime
 
         public PlanetTravelStrategy PlanetTravelStrategy { get; set; } = PlanetTravelStrategy.PlanetCost;
 
-
         /// <summary>
         /// Used if PlanetTravelStrategy is set to PlanetCost.
         /// If true, will use the lower of "planet cost" (3 days) or the "Jump distance" (1 - 16 days).
-        /// Otherwise will the the "planet cost"
+        /// Otherwise will the "planet cost"
         /// </summary>
         public bool UseLowerAmount { get; set; } = true;
     }

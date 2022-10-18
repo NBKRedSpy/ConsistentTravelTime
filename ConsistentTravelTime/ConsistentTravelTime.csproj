@@ -84,7 +84,9 @@
   <ItemGroup>
     <Compile Include="Core.cs" />
     <Compile Include="ModSettings.cs" />
-    <Compile Include="Patches\ChangeInSystemTransitTime.cs" />
+    <Compile Include="Patches\JumpDistanceStrategyPatch.cs" />
+    <Compile Include="Patches\Tracing_Patch.cs" />
+    <Compile Include="Patches\PlanetCostStrategyPatch.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Init.cs" />
     <Compile Include="PlanetTravelStrategy.cs" />
@@ -112,4 +114,9 @@ robocopy $(SolutionDir) $(ProjectName) README.md
 "C:\Program Files\7-Zip\7z.exe" a $(ProjectName).zip $(ProjectName)
 </PostBuildEvent>
   </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties mod_1json__JsonSchema="https://docs.gradle.com/enterprise/admin/schema/gradle-enterprise-config-schema-5.json" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

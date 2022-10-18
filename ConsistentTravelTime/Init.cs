@@ -17,10 +17,17 @@ namespace ConsistentTravelTime
             Core.ModSettings = Newtonsoft.Json.JsonConvert.DeserializeObject<ModSettings>(settingsJSON);
 
 
-            if (Core.ModSettings.Debug) Logger.Log($"PlanetTravelStrategy {Core.ModSettings.PlanetTravelStrategy}");
+            if(Enum.IsDefined(typeof(PlanetTravelStrategy), Core.ModSettings.PlanetTravelStrategy))
+            {
+                if (Core.ModSettings.Debug) Logger.Log($"PlanetTravelStrategy {Core.ModSettings.PlanetTravelStrategy}");
 
-            var harmony = HarmonyInstance.Create("io.github.nbk_redspy.ConsistentTravelTime");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
+                var harmony = HarmonyInstance.Create("io.github.nbk_redspy.ConsistentTravelTime");
+                harmony.PatchAll(Assembly.GetExecutingAssembly());
+            }
+            else
+            {
+                if (Core.ModSettings.Debug) Logger.Log($"Init: PlanetTravelStrategy is invalid:  ${Core.ModSettings.PlanetTravelStrategy}");
+            }
         }
     }
 }
