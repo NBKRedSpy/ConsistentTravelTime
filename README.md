@@ -18,7 +18,7 @@ This mod allows the user to use either the Planet Cost or Jump Distance and defa
 |Setting|Default|Description|
 |--|--|--|
 |UseLowerAmount| true| For PlanetCost strategy only.  If false, will always use the planet's travel cost (3 days).  Otherwise, will use the lower of the travel cost and jump distance.
-|PlanetTravelStrategy|PlanetCost|Determines how many days it will take to travel to a planet when navigation is canceled.  Can be `PlanetCost` or `JumpDistance`. See the [Planet Travel Strategy Settings](#planet-travel-strategy-settings) section.
+|PlanetTravelStrategy|PlanetCost|Determines how many days it will take to travel to a planet.  Can be `PlanetCost` or `JumpDistance`. See the [Planet Travel Strategy Settings](#planet-travel-strategy-settings) section.
 
 
 ## Planet Travel Strategy Settings
@@ -43,8 +43,7 @@ Either way, it's a single player game so I say play it however you like.
 Currently the total days estimated for a navigation does not take into account the reduced travel time to the target planet.  This is a UI mismatch and may be addressed in the future.
 
 ## Jump Distance
-The JumpDistance strategy setting forces a canceled navigation to always require the same number of days whether the player navigates directly to the planet or cancels a navigation and then travels to the planet.  
-
+The JumpDistance strategy uses the planet's Jump Distance number of days to travel to the planet.  This is the same time as vanilla takes to travel from a planet to the Jump Ship.
 
 # Compatibility
 Safe to add and remove from existing saves.
