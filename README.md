@@ -11,7 +11,7 @@ Vanilla Battletech has two different times to travel to a planet:
 * When ending a navigation, the time to the planet is the "Jump Distance", which is anywhere from 1 to 16 days.
 * When aborting a jump and traveling to the system, the time to planet is the "Planet Cost", which is generally 3 days.
 
-This mod allows the user to use either the Planet Cost or Jump Distance and defaults to Planet Cost.  This mod does not affect the time required to travel from the planet to the jump ship, which is always Jump Distance.
+This mod changes the travel time to the planet to always use either the Planet Cost or Jump Distance.  The default setting is Planet Cost.  This mod does not affect the time required to travel from the planet to the jump ship, which is always Jump Distance.
 
 # Settings
 
